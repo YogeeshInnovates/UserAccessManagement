@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+             http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+         version="3.0">
+    
+    <!-- Servlet for SignUp -->
+    <servlet>
+        <servlet-name>SignUpServlet</servlet-name>
+        <servlet-class>com.example.servlet.SignUpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignUpServlet</servlet-name>
+        <url-pattern>/signup</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet for Login -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.example.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet for Software -->
+    <servlet>
+        <servlet-name>SoftwareServlet</servlet-name>
+        <servlet-class>com.example.servlet.SoftwareServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SoftwareServlet</servlet-name>
+        <url-pattern>/software</url-pattern>
+    </servlet-mapping>
+    
+  <servlet>
+        <servlet-name>ApprovalServlet</servlet-name>
+        <servlet-class>com.example.servlet.ApprovalServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ApprovalServlet</servlet-name>
+        <url-pattern>/approvalServlet</url-pattern>
+    </servlet-mapping>
+
+<!--forRequestServlet-->
+ <servlet>
+        <servlet-name>RequestServlet</servlet-name>
+        <servlet-class>com.example.servlet.RequestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RequestServlet</servlet-name>
+        <url-pattern>/requestAccess</url-pattern>
+    </servlet-mapping>
+    
+    <!--For ApprovalServlet-->
+ 
+
+    <!-- Servlet configuration for JSP -->
+    <servlet>
+        <servlet-name>jsp</servlet-name>
+        <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
+        <init-param>
+            <param-name>debug</param-name>
+            <param-value>0</param-value>
+        </init-param>
+        <init-param>
+            <param-name>modification-test-interval</param-name>
+            <param-value>0</param-value>
+        </init-param>
+        <load-on-startup>3</load-on-startup>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>jsp</servlet-name>
+        <url-pattern>*.jsp</url-pattern>
+    </servlet-mapping>
+    
+
+
+
+</web-app>
